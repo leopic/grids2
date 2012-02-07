@@ -66,3 +66,235 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
+
+/*=grid-width($n, $cols: $ninesixty-columns, $gutter-width: $ninesixty-gutter-width)
+  width: $ninesixty-grid-width / $cols * $n - $gutter-width*/
+/*@mixin grid-sufix2(){
+	
+}
+
+
+=grid-prefix($n, $cols: $ninesixty-columns)
+  padding-left: $ninesixty-grid-width / $cols * $n
+=grid-suffix($n, $cols: $ninesixty-columns)
+  padding-right: $ninesixty-grid-width / $cols * $n
+=grid-move-push($n, $cols)
+  left: ($ninesixty-grid-width / $cols) * $n
+
+=grid-move-pull($n, $cols)
+  left: -($ninesixty-grid-width / $cols) * $n
+
+=grid-push($n, $cols: $ninesixty-columns)
+  +grid-move-base
+  +grid-move-push($n, $cols)
+
+=grid-pull($n, $cols: $ninesixty-columns)
+  +grid-move-base
+  +grid-move-pull($n, $cols)  
+*/
+/* line 11, ../sass/screen.scss */
+.container {
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 10px;
+  width: 1000px;
+  background: red;
+}
+
+/* line 19, ../sass/screen.scss */
+.first-row,
+.second-row,
+.third-row,
+.fourth-row {
+  background: pink;
+  overflow: hidden;
+}
+
+/* line 23, ../sass/screen.scss */
+[class^=some-div] {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  display: inline;
+  margin: 10px 0;
+  padding: 10px;
+  width: 100px;
+}
+
+/* line 34, ../sass/screen.scss */
+.some-div0 {
+  background: rgba(255, 255, 255, 0);
+  border: 1px solid rgba(255, 255, 255, 0);
+  color: black;
+}
+
+/* line 34, ../sass/screen.scss */
+.some-div1 {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: black;
+}
+
+/* line 34, ../sass/screen.scss */
+.some-div2 {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: black;
+}
+
+/* line 34, ../sass/screen.scss */
+.some-div3 {
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: black;
+}
+
+/* line 34, ../sass/screen.scss */
+.some-div4 {
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: black;
+}
+
+/* line 34, ../sass/screen.scss */
+.some-div5 {
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: black;
+}
+
+/* line 34, ../sass/screen.scss */
+.some-div6 {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  color: black;
+}
+
+/* line 34, ../sass/screen.scss */
+.some-div7 {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  color: black;
+}
+
+/* line 34, ../sass/screen.scss */
+.some-div8 {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  color: black;
+}
+
+/* line 34, ../sass/screen.scss */
+.some-div9 {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  color: black;
+}
+
+/* line 41, ../sass/screen.scss */
+.some-div9 {
+  text-align: right;
+}
+
+/* line 45, ../sass/screen.scss */
+.col5 {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  display: inline;
+  margin: 10px 0;
+  padding: 10px;
+  width: 500px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+/* line 50, ../sass/screen.scss */
+.col5.omega {
+  padding-right: 0;
+  text-align: right;
+}
+
+/* line 55, ../sass/screen.scss */
+.col5.alpha {
+  padding-left: 0;
+}
+
+/* line 59, ../sass/screen.scss */
+.col2 {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  display: inline;
+  margin: 10px 0;
+  padding: 10px;
+  width: 200px;
+}
+
+/* line 70, ../sass/screen.scss */
+.another-div0 {
+  background: rgba(0, 0, 0, 0);
+  border: 1px solid rgba(0, 0, 0, 0);
+  color: white;
+}
+
+/* line 70, ../sass/screen.scss */
+.another-div1 {
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: white;
+}
+
+/* line 70, ../sass/screen.scss */
+.another-div2 {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  color: white;
+}
+
+/* line 70, ../sass/screen.scss */
+.another-div3 {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+/* line 70, ../sass/screen.scss */
+.another-div4 {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  color: white;
+}
+
+/* line 77, ../sass/screen.scss */
+.col4 {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  display: inline;
+  margin: 10px 0;
+  padding: 10px;
+  width: 400px;
+  border: 1px solid black;
+}
+
+/* line 82, ../sass/screen.scss */
+.col6 {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  display: inline;
+  margin: 10px 0;
+  padding: 10px;
+  width: 600px;
+  border: 1px solid white;
+}

@@ -1,3 +1,54 @@
 $ninesixty-columns: 10;
-$ninesixty-grid-width: 100px;
+$ninesixty-grid-width: 1000px;
 $ninesixty-gutter-width: 0;
+
+/*=grid-width($n, $cols: $ninesixty-columns, $gutter-width: $ninesixty-gutter-width)
+  width: $ninesixty-grid-width / $cols * $n - $gutter-width*/
+
+@mixin grid-width($n, $cols: $ninesixty-columns, $gutter-width: $ninesixty-gutter-width){
+	width: $ninesixty-grid-width / $cols * $n - $gutter-width;
+}
+
+@mixin grid-container2 {	 	
+	margin: 0 auto; overflow: hidden; padding: 10px;
+	width: $ninesixty-grid-width;
+}
+
+@mixin grid2($cols: 1){
+	@include box-sizing(border-box);
+	float: left; display: inline; margin: 10px 0; padding: 10px;
+	width: 100px * $cols;
+}
+
+@mixin alpha2 {
+	padding-left: 0;
+}
+
+@mixin omega2 {
+	padding-right: 0;
+}
+
+
+/*@mixin grid-sufix2(){
+	
+}
+
+
+=grid-prefix($n, $cols: $ninesixty-columns)
+  padding-left: $ninesixty-grid-width / $cols * $n
+=grid-suffix($n, $cols: $ninesixty-columns)
+  padding-right: $ninesixty-grid-width / $cols * $n
+=grid-move-push($n, $cols)
+  left: ($ninesixty-grid-width / $cols) * $n
+
+=grid-move-pull($n, $cols)
+  left: -($ninesixty-grid-width / $cols) * $n
+
+=grid-push($n, $cols: $ninesixty-columns)
+  +grid-move-base
+  +grid-move-push($n, $cols)
+
+=grid-pull($n, $cols: $ninesixty-columns)
+  +grid-move-base
+  +grid-move-pull($n, $cols)  
+*/

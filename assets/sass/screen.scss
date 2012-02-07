@@ -6,4 +6,80 @@
 @import "compass/reset";
 @import "960/grid";
 @import "grid";
+@import "compass/css3";
 
+.container {
+	@include grid-container2;
+	background: red;
+}
+
+.first-row,
+.second-row,
+.third-row,
+.fourth-row {
+	background: pink; overflow: hidden;
+}
+
+[class^=some-div] {
+	@include grid2(1);
+}
+
+$base: white;
+$total: 10;
+
+@for $i from 0 to $total {
+	$numb: $i/10;
+	$sel:  ".some-div";
+
+	#{$sel}#{$i} {
+		background: rgba($base, $numb);
+		border: 1px solid rgba($base, $numb);
+		color: invert($base);
+	}
+}
+
+.some-div9 {
+	text-align: right;
+}
+
+.col5 {
+	@include grid2(5);
+	border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.col5.omega {
+	@include omega2;
+	text-align: right;
+}
+
+.col5.alpha {
+	@include alpha2;
+}
+
+.col2 {
+	@include grid2(2);
+}
+
+$base: black;
+$total: 5;
+
+@for $i from 0 to $total {
+	$numb: $i/10;
+	$sel:  ".another-div";
+
+	#{$sel}#{$i} {
+		background: rgba($base, $numb);
+		border: 1px solid rgba($base, $numb);
+		color: invert($base);
+	}
+}
+
+.col4 {
+	@include grid2(4);
+	border: 1px solid black;
+}
+
+.col6 {
+	@include grid2(6);
+	border: 1px solid white;
+}
